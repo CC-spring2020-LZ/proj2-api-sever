@@ -18,7 +18,6 @@ public class RecommendController {
 	@Autowired
 	private IRecommendService iRecommendService;
 
-
 	@RequestMapping(value = "requestRecommend.do", method = RequestMethod.POST)
 	@ResponseBody
 	public ServerResponse<String> getRecommend(String term, String location, String latitude,
@@ -42,6 +41,5 @@ public class RecommendController {
 		ServerResponse<String> response = iRecommendService.getRecommendByID(restaurantID);
 		return response;
 	}
-
 
 }
